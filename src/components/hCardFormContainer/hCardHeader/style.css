@@ -1,0 +1,10 @@
+.headerContainer {
+  padding-top: 50px;
+}
+
+.subheading {
+  padding-top: 20px;
+  color: gray;
+  border-bottom: 1px solid gray;
+  font-size: 85%;
+}
