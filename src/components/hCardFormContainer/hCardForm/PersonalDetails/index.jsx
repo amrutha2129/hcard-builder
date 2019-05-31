@@ -14,17 +14,16 @@ export default class PersonalDetails extends React.PureComponent {
   }
 
   handleNameChange(event) {
-    this.setState({ name: event.target.name });
-    this.updateHCardPreview(this.state.name);
+    this.setState({ name: event.target.value });
   }
   handleSurnameChange(event) {
-    this.setState({ surname: event.target.surname });
+    this.setState({ surname: event.target.value });
   }
   handleEmailChange(event) {
-    this.setState({ email: event.target.email });
+    this.setState({ email: event.target.value });
   }
   handlePhoneChange(event) {
-    this.setState({ phone: event.target.phone });
+    this.setState({ phone: event.target.value });
   }
 
   render() {
@@ -36,8 +35,8 @@ export default class PersonalDetails extends React.PureComponent {
               <Label>GIVEN NAME</Label>
               <Input
                 type="text"
-                value="givenName"
-                id="givenName"
+                value={this.state.name}
+                id="name"
                 onChange={this.handleNameChange}
               />
             </FormGroup>
@@ -47,7 +46,7 @@ export default class PersonalDetails extends React.PureComponent {
               <Label>SURNAME</Label>
               <Input
                 type="text"
-                value="surname"
+                value={this.state.surname}
                 id="surname"
                 onChange={this.handleSurnameChange}
               />
@@ -60,7 +59,7 @@ export default class PersonalDetails extends React.PureComponent {
               <Label>EMAIL</Label>
               <Input
                 type="email"
-                value="email"
+                value={this.state.email}
                 id="email"
                 onChange={this.handleEmailChange}
               />
@@ -71,7 +70,7 @@ export default class PersonalDetails extends React.PureComponent {
               <Label>PHONE</Label>
               <Input
                 type="text"
-                value="phone"
+                value={this.state.phone}
                 id="phone"
                 onChange={this.handlePhoneChange}
               />
