@@ -1,3 +1,15 @@
 .cardContainer {
   padding-top: 25vh !important;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.cardItems {
+  border-bottom: 1px solid #e8e8e8;
+  font-size: 85%;
+}
+
+.cardHeader {
+  background-color: #394756 !important;
+  height: 15vh;
 }
