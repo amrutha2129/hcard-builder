@@ -1,30 +1,14 @@
 import React from "react";
 import { FormGroup, Label, Input, Row, Col } from "reactstrap";
-// import HCardPreview from "../../../HCardPreviewContainer/HCardPreview";
+import { func } from "prop-types";
 
 export default class PersonalDetails extends React.PureComponent {
-  constructor(props) {
-    super(props);
-    this.state = { name: "", surname: "", email: "", phone: "" };
-
-    this.handleNameChange = this.handleNameChange.bind(this);
-    this.handleSurnameChange = this.handleSurnameChange.bind(this);
-    this.handleEmailChange = this.handleEmailChange.bind(this);
-    this.handlePhoneChange = this.handlePhoneChange.bind(this);
-  }
-
-  handleNameChange(event) {
-    this.setState({ name: event.target.value });
-  }
-  handleSurnameChange(event) {
-    this.setState({ surname: event.target.value });
-  }
-  handleEmailChange(event) {
-    this.setState({ email: event.target.value });
-  }
-  handlePhoneChange(event) {
-    this.setState({ phone: event.target.value });
-  }
+  static propTypes = {
+    handleNameChange: func.isRequired,
+    handleSurnameChange: func.isRequired,
+    handleEmailChange: func.isRequired,
+    handlePhoneChange: func.isRequired
+  };
 
   render() {
     return (
@@ -35,9 +19,8 @@ export default class PersonalDetails extends React.PureComponent {
               <Label>GIVEN NAME</Label>
               <Input
                 type="text"
-                value={this.state.name}
                 id="name"
-                onChange={this.handleNameChange}
+                onChange={e => this.props.handleNameChange(e.target.value)}
               />
             </FormGroup>
           </Col>
@@ -46,9 +29,8 @@ export default class PersonalDetails extends React.PureComponent {
               <Label>SURNAME</Label>
               <Input
                 type="text"
-                value={this.state.surname}
                 id="surname"
-                onChange={this.handleSurnameChange}
+                onChange={e => this.props.handleSurnameChange(e.target.value)}
               />
             </FormGroup>
           </Col>
@@ -59,9 +41,8 @@ export default class PersonalDetails extends React.PureComponent {
               <Label>EMAIL</Label>
               <Input
                 type="email"
-                value={this.state.email}
                 id="email"
-                onChange={this.handleEmailChange}
+                onChange={e => this.props.handleEmailChange(e.target.value)}
               />
             </FormGroup>
           </Col>
@@ -70,9 +51,8 @@ export default class PersonalDetails extends React.PureComponent {
               <Label>PHONE</Label>
               <Input
                 type="text"
-                value={this.state.phone}
                 id="phone"
-                onChange={this.handlePhoneChange}
+                onChange={e => this.props.handlePhoneChange(e.target.value)}
               />
             </FormGroup>
           </Col>

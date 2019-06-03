@@ -1,47 +1,18 @@
 import React from "react";
 import { FormGroup, Label, Input, Row, Col } from "reactstrap";
+import { func } from "prop-types";
 
 export default class Address extends React.PureComponent {
-  constructor(props) {
-    super(props);
-    this.state = {
-      housename: "",
-      street: "",
-      suburb: "",
-      state: "",
-      postcode: 0,
-      country: ""
-    };
-
-    this.handleHouseNameChange = this.handleHouseNameChange.bind(this);
-    this.handleStreetChange = this.handleStreetChange.bind(this);
-    this.handleSuburbChange = this.handleSuburbChange.bind(this);
-    this.handleStateChange = this.handleStateChange.bind(this);
-    this.handlePostcodeChange = this.handlePostcodeChange.bind(this);
-    this.handleCountryChange = this.handleCountryChange.bind(this);
-  }
-
-  handleHouseNameChange(event) {
-    this.setState({ housename: event.target.value });
-  }
-  handleStreetChange(event) {
-    this.setState({ street: event.target.value });
-  }
-  handleSuburbChange(event) {
-    this.setState({ suburb: event.target.value });
-  }
-  handleStateChange(event) {
-    this.setState({ state: event.target.value });
-  }
-  handlePostcodeChange(event) {
-    this.setState({ postcode: event.target.value });
-  }
-  handleCountryChange(event) {
-    this.setState({ country: event.target.value });
-  }
+  static propTypes = {
+    handleHouseNameChange: func.isRequired,
+    handleStreetChange: func.isRequired,
+    handleStateChange: func.isRequired,
+    handleCountryChange: func.isRequired,
+    handlePostcodeChange: func.isRequired,
+    handleSuburbChange: func.isRequired
+  };
 
   render() {
-    const { housename, street, suburb, state, postcode, country } = this.state;
     return (
       <>
         <Row form>
@@ -50,9 +21,8 @@ export default class Address extends React.PureComponent {
               <Label>HOUSE NAME OR #</Label>
               <Input
                 type="text"
-                value={housename}
                 id="houseName"
-                onChange={this.handleHouseNameChange}
+                onChange={e => this.props.handleHouseNameChange(e.target.value)}
               />
             </FormGroup>
           </Col>
@@ -61,9 +31,8 @@ export default class Address extends React.PureComponent {
               <Label>STREET</Label>
               <Input
                 type="text"
-                value={street}
                 id="street"
-                onChange={this.handleStreetChange}
+                onChange={e => this.props.handleStreetChange(e.target.value)}
               />
             </FormGroup>
           </Col>
@@ -74,9 +43,8 @@ export default class Address extends React.PureComponent {
               <Label>SUBURB</Label>
               <Input
                 type="text"
-                value={suburb}
                 id="suburb"
-                onChange={this.handleSuburbChange}
+                onChange={e => this.props.handleSuburbChange(e.target.value)}
               />
             </FormGroup>
           </Col>
@@ -85,9 +53,8 @@ export default class Address extends React.PureComponent {
               <Label>STATE</Label>
               <Input
                 type="text"
-                value={state}
                 id="state"
-                onChange={this.handleStateChange}
+                onChange={e => this.props.handleStateChange(e.target.value)}
               />
             </FormGroup>
           </Col>
@@ -98,9 +65,8 @@ export default class Address extends React.PureComponent {
               <Label>POSTCODE</Label>
               <Input
                 type="text"
-                value={postcode}
                 id="postcode"
-                onChange={this.handlePostcodeChange}
+                onChange={e => this.props.handlePostcodeChange(e.target.value)}
               />
             </FormGroup>
           </Col>
@@ -109,9 +75,8 @@ export default class Address extends React.PureComponent {
               <Label>COUNTRY</Label>
               <Input
                 type="text"
-                value={country}
                 id="country"
-                onChange={this.handleCountryChange}
+                onChange={e => this.props.handleCountryChange(e.target.value)}
               />
             </FormGroup>
           </Col>

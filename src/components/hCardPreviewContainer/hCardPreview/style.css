@@ -12,4 +12,6 @@
 .cardHeader {
   background-color: #394756 !important;
   height: 15vh;
+  color: white;
+  justify-content: center;
 }
