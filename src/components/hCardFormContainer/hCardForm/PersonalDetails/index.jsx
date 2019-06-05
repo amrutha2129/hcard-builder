@@ -1,6 +1,7 @@
 import React from "react";
 import { FormGroup, Label, Input, Row, Col } from "reactstrap";
 import { func } from "prop-types";
+import "./style.css";
 
 export default class PersonalDetails extends React.PureComponent {
   static propTypes = {
@@ -18,6 +19,7 @@ export default class PersonalDetails extends React.PureComponent {
             <FormGroup>
               <Label>GIVEN NAME</Label>
               <Input
+                className="inputText"
                 type="text"
                 id="name"
                 onChange={e => this.props.handleNameChange(e.target.value)}
@@ -28,6 +30,7 @@ export default class PersonalDetails extends React.PureComponent {
             <FormGroup>
               <Label>SURNAME</Label>
               <Input
+                className="inputText"
                 type="text"
                 id="surname"
                 onChange={e => this.props.handleSurnameChange(e.target.value)}
@@ -40,6 +43,7 @@ export default class PersonalDetails extends React.PureComponent {
             <FormGroup>
               <Label>EMAIL</Label>
               <Input
+                className="inputText"
                 type="email"
                 id="email"
                 onChange={e => this.props.handleEmailChange(e.target.value)}
@@ -50,6 +54,7 @@ export default class PersonalDetails extends React.PureComponent {
             <FormGroup>
               <Label>PHONE</Label>
               <Input
+                className="inputText"
                 type="text"
                 id="phone"
                 onChange={e => this.props.handlePhoneChange(e.target.value)}

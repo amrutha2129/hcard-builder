@@ -1,0 +1,13 @@
+.uploadBtn {
+  background-color: #6c7884 !important;
+  color: white;
+}
+
+.submitBtn {
+  background-color: #35b0dd !important;
+  color: white;
+}
+
+.btnSection {
+  padding-top: 20px !important;
+}

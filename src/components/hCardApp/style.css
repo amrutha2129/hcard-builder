@@ -1,0 +1,11 @@
+.row-eq-height {
+  display: -webkit-box !important;
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+}
+
+.previewContainer {
+  background-color: #e8e8e8 !important;
+}

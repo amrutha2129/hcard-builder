@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "reactstrap";
 import HCardFormContainer from "../HCardFormContainer/index";
 import HCardPreviewContainer from "../HCardPreviewContainer/index";
+import "./style.css";
 
 export default class HCardApp extends React.PureComponent {
   constructor(props) {
@@ -76,7 +77,7 @@ export default class HCardApp extends React.PureComponent {
     } = this.state;
     return (
       <Container>
-        <Row>
+        <Row className="row-eq-height">
           <Col sm={6}>
             <div>
               <HCardFormContainer
@@ -93,7 +94,7 @@ export default class HCardApp extends React.PureComponent {
               />
             </div>
           </Col>
-          <Col sm={6}>
+          <Col sm={6} className="previewContainer">
             <div>
               <HCardPreviewContainer
                 name={name}

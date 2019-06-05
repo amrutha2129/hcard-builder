@@ -2,16 +2,64 @@
   padding-top: 25vh !important;
   padding-left: 2rem;
   padding-right: 2rem;
+  box-shadow: 5px gray;
 }
 
 .cardItems {
   border-bottom: 1px solid #e8e8e8;
   font-size: 85%;
+  display: flex;
 }
 
 .cardHeader {
   background-color: #394756 !important;
   height: 15vh;
   color: white;
-  justify-content: center;
+  display: flex;
+}
+
+#image {
+  height: 11vh;
+  width: 15vh;
+  /* //float: right; */
+}
+
+.imageBtn {
+  flex: 25%;
+}
+
+.heading {
+  font-family: "Book Antiqua";
+  padding-bottom: 5px;
+  padding-left: 20px;
+  flex: 75%;
+}
+
+@media (min-width: 905px) {
+  .heading {
+    padding-top: 7%;
+  }
+}
+
+.previewText {
+  padding-left: 2vw;
+  font-family: "Book Antiqua";
+  font-size: 1.2rem;
+}
+
+.previewTextHeading {
+  margin-top: 1vh;
+}
+
+.cardBody {
+  background-color: white;
+  padding-top: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 20px;
+}
+
+.postCodeContainer {
+  border-bottom: 1px solid #e8e8e8;
+  font-size: 85%;
 }

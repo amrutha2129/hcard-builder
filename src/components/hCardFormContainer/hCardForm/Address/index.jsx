@@ -1,6 +1,7 @@
 import React from "react";
 import { FormGroup, Label, Input, Row, Col } from "reactstrap";
 import { func } from "prop-types";
+import "./style.css";
 
 export default class Address extends React.PureComponent {
   static propTypes = {
@@ -20,6 +21,7 @@ export default class Address extends React.PureComponent {
             <FormGroup>
               <Label>HOUSE NAME OR #</Label>
               <Input
+                className="inputText"
                 type="text"
                 id="houseName"
                 onChange={e => this.props.handleHouseNameChange(e.target.value)}
@@ -30,6 +32,7 @@ export default class Address extends React.PureComponent {
             <FormGroup>
               <Label>STREET</Label>
               <Input
+                className="inputText"
                 type="text"
                 id="street"
                 onChange={e => this.props.handleStreetChange(e.target.value)}
@@ -42,6 +45,7 @@ export default class Address extends React.PureComponent {
             <FormGroup>
               <Label>SUBURB</Label>
               <Input
+                className="inputText"
                 type="text"
                 id="suburb"
                 onChange={e => this.props.handleSuburbChange(e.target.value)}
@@ -52,6 +56,7 @@ export default class Address extends React.PureComponent {
             <FormGroup>
               <Label>STATE</Label>
               <Input
+                className="inputText"
                 type="text"
                 id="state"
                 onChange={e => this.props.handleStateChange(e.target.value)}
@@ -64,6 +69,7 @@ export default class Address extends React.PureComponent {
             <FormGroup>
               <Label>POSTCODE</Label>
               <Input
+                className="inputText"
                 type="text"
                 id="postcode"
                 onChange={e => this.props.handlePostcodeChange(e.target.value)}
@@ -74,6 +80,7 @@ export default class Address extends React.PureComponent {
             <FormGroup>
               <Label>COUNTRY</Label>
               <Input
+                className="inputText"
                 type="text"
                 id="country"
                 onChange={e => this.props.handleCountryChange(e.target.value)}

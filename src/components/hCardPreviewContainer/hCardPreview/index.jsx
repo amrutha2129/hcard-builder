@@ -2,6 +2,7 @@ import React from "react";
 import { Card, CardBody, CardHeader, Row, Col } from "reactstrap";
 import "./style.css";
 import { string, number } from "prop-types";
+import userImage from "../../../assets/person-icon.png";
 
 export default class HCardPreview extends React.PureComponent {
   static propTypes = {
@@ -33,32 +34,44 @@ export default class HCardPreview extends React.PureComponent {
       <div className="cardContainer">
         <Card>
           <CardHeader className="cardHeader">
-            <div>
-              <h2>
-                {name}&nbsp;{surname}
-              </h2>
-            </div>
+            <h2 className="heading">
+              {name}&nbsp;{surname}
+            </h2>
+
+            <button className="imageBtn" onclick="">
+              <img id="image" src={userImage} alt="" />
+            </button>
           </CardHeader>
           <CardBody>
             <p className="cardItems">
-              EMAIL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{email}
+              <div className="previewTextHeading">EMAIL</div>
+              <div className="previewText">{email}</div>
+            </p>
+
+            <p className="cardItems">
+              <div className="previewTextHeading">PHONE</div>
+              <div className="previewText">{phone}</div>
             </p>
             <p className="cardItems">
-              PHONE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{phone}
+              <div className="previewTextHeading">ADDRESS</div>
+              <div className="previewText">
+                {housename}&nbsp;{street}
+              </div>
             </p>
             <p className="cardItems">
-              ADDRESS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{housename}&nbsp;{street}
+              <div className="previewText">
+                {suburb},&nbsp;{state}
+              </div>
             </p>
-            <p className="cardItems">
-              {suburb},&nbsp;{state}
-            </p>
-            <p className="cardItems">
+            <p>
               <Row>
-                <Col sm={6}>
-                  <div>POSTCODE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{postcode}</div>
+                <Col sm={6} className="cardItems">
+                  <div className="previewTextHeading">POSTCODE</div>
+                  <div className="previewText">{postcode}</div>
                 </Col>
-                <Col sm={6}>
-                  <div>COUNTRY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{country}</div>
+                <Col sm={6} className="cardItems">
+                  <div className="previewTextHeading">COUNTRY</div>
+                  <div className="previewText">{country}</div>
                 </Col>
               </Row>
             </p>

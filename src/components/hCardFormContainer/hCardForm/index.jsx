@@ -1,9 +1,10 @@
 import React from "react";
-import { Form } from "reactstrap";
+import { Form, Button, Row, Col } from "reactstrap";
 import HCardSubHeading from "../HCardSubHeading";
 import PersonalDetails from "./PersonalDetails";
 import Address from "./Address";
 import { func } from "prop-types";
+import "./style.css";
 
 export default class HCardForm extends React.PureComponent {
   static propTypes = {
@@ -38,6 +39,19 @@ export default class HCardForm extends React.PureComponent {
           handlePostcodeChange={this.props.handlePostcodeChange}
           handleSuburbChange={this.props.handleSuburbChange}
         />
+
+        <Row className="btnSection">
+          <Col sm={6}>
+            <Button className="uploadBtn" block>
+              Upload Avatar
+            </Button>
+          </Col>
+          <Col sm={6}>
+            <Button className="submitBtn" block>
+              Create hCard
+            </Button>
+          </Col>
+        </Row>
       </Form>
     );
   }

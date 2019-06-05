@@ -1,5 +1,5 @@
 import React from "react";
-import "./style.css";
+
 import HCardPreview from "./HCardPreview";
 import { string, number } from "prop-types";
 
@@ -30,7 +30,7 @@ export default class HCardPreviewContainer extends React.PureComponent {
       state
     } = this.props;
     return (
-      <div className="previewContainer">
+      <div>
         <HCardPreview
           name={name}
           surname={surname}

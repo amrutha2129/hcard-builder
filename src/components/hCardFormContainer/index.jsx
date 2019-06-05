@@ -2,6 +2,7 @@ import React from "react";
 import HCardHeader from "./HCardHeader";
 import HCardForm from "./HCardForm";
 import { func } from "prop-types";
+import "./style.css";
 
 export default class HCardFormContainer extends React.PureComponent {
   static propTypes = {
@@ -18,7 +19,7 @@ export default class HCardFormContainer extends React.PureComponent {
   };
   render() {
     return (
-      <div className="fileContainer">
+      <div className="formContainer">
         <HCardHeader />
         <HCardForm
           handleNameChange={this.props.handleNameChange}
