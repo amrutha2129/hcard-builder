@@ -1,0 +1,15 @@
+.cardItems {
+  border-bottom: 1px solid #e8e8e8;
+  font-size: 85%;
+  display: flex;
+}
+
+.previewText {
+  padding-left: 2vw;
+  font-family: "Book Antiqua";
+  font-size: 1.2rem;
+}
+
+.previewTextHeading {
+  margin-top: 1vh;
+}
