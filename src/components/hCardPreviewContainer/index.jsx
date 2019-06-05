@@ -1,7 +1,7 @@
 import React from "react";
 import { Card, CardBody, CardHeader, Row, Col } from "reactstrap";
 import "./style.css";
-import { string, number } from "prop-types";
+import { string } from "prop-types";
 import userImage from "../../assets/person-icon.png";
 import HCardPreviewField from "./HCardPreviewField";
 
@@ -10,12 +10,12 @@ export default class HCardPreview extends React.PureComponent {
     name: string.isRequired,
     surname: string,
     email: string,
-    phone: number,
+    phone: string,
     housename: string,
     street: string,
     suburb: string,
     state: string,
-    postcode: number,
+    postcode: string,
     country: string
   };
   render() {
@@ -41,7 +41,7 @@ export default class HCardPreview extends React.PureComponent {
               {name}&nbsp;{surname}
             </h2>
 
-            <button className="imageBtn" onclick="">
+            <button className="imageBtn">
               <img id="image" src={userImage} alt="" />
             </button>
           </CardHeader>

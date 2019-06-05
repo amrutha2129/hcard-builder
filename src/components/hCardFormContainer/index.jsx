@@ -1,5 +1,5 @@
 import React from "react";
-import HCardHeader from "./HCardHeader";
+import HCardFormHeader from "./HCardFormHeader";
 import HCardForm from "./HCardForm";
 import { func } from "prop-types";
 import "./style.css";
@@ -20,7 +20,7 @@ export default class HCardFormContainer extends React.PureComponent {
   render() {
     return (
       <div className="formContainer">
-        <HCardHeader />
+        <HCardFormHeader />
         <HCardForm
           handleNameChange={this.props.handleNameChange}
           handleSurnameChange={this.props.handleSurnameChange}

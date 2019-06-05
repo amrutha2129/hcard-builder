@@ -12,12 +12,12 @@ export default class HCardApp extends React.PureComponent {
       street: "",
       suburb: "",
       state: "",
-      postcode: Number,
+      postcode: "",
       country: "",
       name: "",
       surname: "",
       email: "",
-      phone: Number
+      phone: ""
     };
 
     this.handleNameChange = this.handleNameChange.bind(this);

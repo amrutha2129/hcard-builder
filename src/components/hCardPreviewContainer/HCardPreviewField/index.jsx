@@ -1,8 +1,6 @@
 import React from "react";
-import { Card, CardBody, CardHeader, Row, Col } from "reactstrap";
 import "./style.css";
-import { string, number } from "prop-types";
-import userImage from "../../../assets/person-icon.png";
+import { string } from "prop-types";
 
 export default class HCardPreviewField extends React.PureComponent {
   static propTypes = {

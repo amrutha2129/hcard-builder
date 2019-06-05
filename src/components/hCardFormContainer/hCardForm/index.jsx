@@ -1,6 +1,6 @@
 import React from "react";
 import { Form, Button, Row, Col } from "reactstrap";
-import HCardSubHeading from "../HCardSubHeading";
+import HCardSubHeading from "./HCardSubHeading";
 import PersonalDetails from "./PersonalDetails";
 import Address from "./Address";
 import { func } from "prop-types";
