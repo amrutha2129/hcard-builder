@@ -6,7 +6,7 @@ export default class HCardFormHeader extends React.PureComponent {
     return (
       <div className="headerContainer">
         <React.Fragment>
-          <h1>hCard Builder</h1>
+          <h1>HCard Builder</h1>
         </React.Fragment>
       </div>
     );

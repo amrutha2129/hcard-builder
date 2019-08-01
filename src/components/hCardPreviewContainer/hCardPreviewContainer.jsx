@@ -3,7 +3,7 @@ import { Card, CardBody, CardHeader, Row, Col } from "reactstrap";
 import "./style.css";
 import { string } from "prop-types";
 import userImage from "../../assets/person-icon.png";
-import HCardPreviewField from "./HCardPreviewField";
+import HCardPreviewField from "./HCardPreviewField/HCardPreviewField";
 
 export default class HCardPreview extends React.PureComponent {
   static propTypes = {

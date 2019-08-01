@@ -1,5 +1,5 @@
 import React from "react";
-import HCardApp from "./components/HCardApp";
+import HCardApp from "./components/hCardApp/hCardApp";
 import "./App.css";
 
 function App() {

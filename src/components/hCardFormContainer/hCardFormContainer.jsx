@@ -1,12 +1,10 @@
 import React from "react";
-import { Form, Button, Row, Col } from "reactstrap";
-import HCardSubHeading from "./HCardSubHeading";
-import PersonalDetails from "./PersonalDetails";
-import Address from "./Address";
+import HCardFormHeader from "./HCardFormHeader/HCardFormHeader";
+import HCardForm from "./hCardForm/hCardForm";
 import { func } from "prop-types";
 import "./style.css";
 
-export default class HCardForm extends React.PureComponent {
+export default class HCardFormContainer extends React.PureComponent {
   static propTypes = {
     handleNameChange: func.isRequired,
     handleSurnameChange: func.isRequired,
@@ -19,19 +17,15 @@ export default class HCardForm extends React.PureComponent {
     handlePostcodeChange: func.isRequired,
     handleSuburbChange: func.isRequired
   };
-
   render() {
     return (
-      <Form>
-        <HCardSubHeading subHeading="PERSONAL DETAILS" />
-        <PersonalDetails
+      <div className="formContainer">
+        <HCardFormHeader />
+        <HCardForm
           handleNameChange={this.props.handleNameChange}
           handleSurnameChange={this.props.handleSurnameChange}
           handleEmailChange={this.props.handleEmailChange}
           handlePhoneChange={this.props.handlePhoneChange}
-        />
-        <HCardSubHeading subHeading="ADDRESS" />
-        <Address
           handleHouseNameChange={this.props.handleHouseNameChange}
           handleStreetChange={this.props.handleStreetChange}
           handleStateChange={this.props.handleStateChange}
@@ -39,20 +33,7 @@ export default class HCardForm extends React.PureComponent {
           handlePostcodeChange={this.props.handlePostcodeChange}
           handleSuburbChange={this.props.handleSuburbChange}
         />
-
-        <Row className="btnSection">
-          <Col sm={6}>
-            <Button className="uploadBtn" block>
-              Upload Avatar
-            </Button>
-          </Col>
-          <Col sm={6}>
-            <Button className="submitBtn" block>
-              Create hCard
-            </Button>
-          </Col>
-        </Row>
-      </Form>
+      </div>
     );
   }
 }

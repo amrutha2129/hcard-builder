@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
-import HCardFormContainer from "../HCardFormContainer/index";
-import HCardPreviewContainer from "../HCardPreviewContainer/index";
+import HCardFormContainer from "../hCardFormContainer/hCardFormContainer";
+import HCardPreviewContainer from "../hCardPreviewContainer/hCardPreviewContainer";
 import "./style.css";
 
 export default class HCardApp extends React.PureComponent {
